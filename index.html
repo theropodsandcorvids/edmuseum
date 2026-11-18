@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>(First & Last Name) — K–12 STEM Educator & Science Outreach Specialist</title>
+<meta name="description" content="Portfolio: standards-aligned K–12 curriculum, museum science translation, live teaching and program impact for Northern New Mexico learners.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4EEE3; --paper-2:#EBE3D4; --card:#FBF8F2;
+  --ink:#1D2330; --ink-soft:#4A5162; --line:#D8CEBC;
+  --chile:#B4442B; --chile-dk:#8F3320; --sky:#2B6C8C; --sky-lt:#DCEAF0; --sage:#5E7A55;
+  --ph-bg:#E3DED5; --ph-tx:#666159;
+  --serif:'Fraunces',Georgia,serif; --sans:'Public Sans',system-ui,sans-serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --wrap:1180px; --r:6px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.01em;margin:0}
+h1{font-size:clamp(40px,5.6vw,68px);line-height:1.02;letter-spacing:-.025em}
+h2{font-size:clamp(30px,3.4vw,42px);line-height:1.08;letter-spacing:-.02em}
+h3{font-size:23px;line-height:1.2}
+p{margin:0 0 1em}
+.eyebrow{font:500 13px/1 var(--mono);letter-spacing:.06em;color:var(--chile);text-transform:uppercase;margin-bottom:18px;display:block}
+.lede{font-size:20px;line-height:1.55;color:var(--ink-soft);max-width:62ch}
+.goal{font:italic 400 15px/1.5 var(--sans);color:var(--ink-soft);border-left:3px solid var(--chile);padding-left:12px;margin-top:20px;max-width:60ch}
+
+/* placeholder text: unverified / to-fill content */
+.ph{font-style:italic;color:var(--ph-tx);background:var(--ph-bg);padding:.05em .35em;border-radius:3px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.on-dark .ph{background:rgba(255,255,255,.14);color:#D6D2C9}
+
+/* ---------- NAV ---------- */
+.nav{position:sticky;top:0;z-index:50;background:rgba(244,238,227,.94);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:22px;height:68px}
+.brand{text-decoration:none;display:flex;flex-direction:column;line-height:1.15;margin-right:auto}
+.brand b{font:600 19px var(--serif)}
+.brand span{font:500 11.5px var(--mono);color:var(--ink-soft);letter-spacing:.03em}
+.links{display:flex;gap:4px}
+.links a{text-decoration:none;font:500 14.5px var(--sans);padding:8px 11px;border-radius:4px;color:var(--ink-soft);white-space:nowrap}
+.links a:hover{color:var(--ink);background:var(--paper-2)}
+.links a.active{color:var(--ink);box-shadow:inset 0 -2px 0 var(--chile);border-radius:0}
+.btn{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font:600 15px/1 var(--sans);padding:14px 20px;border-radius:var(--r);border:0;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn:focus-visible,.links a:focus-visible{outline:3px solid var(--sky);outline-offset:2px}
+.btn-primary{background:var(--chile);color:#fff}
+.btn-primary:hover{background:var(--chile-dk)}
+.btn-ink{background:var(--ink);color:var(--paper)}
+.btn-ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+.btn-sm{padding:10px 14px;font-size:14px}
+.btn-resume{white-space:nowrap}
+.brand span{white-space:nowrap}
+.btn svg{width:16px;height:16px;flex:none}
+.menu-toggle{display:none;background:none;border:0;padding:8px;cursor:pointer}
+.menu-toggle svg{width:26px;height:26px}
+
+/* ---------- PAGES ---------- */
+.page{display:none;animation:fade .35s ease}
+.page.show{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+section.block{padding:84px 0}
+section.block.tight{padding:56px 0}
+.page-head{padding:76px 0 40px}
+.page-head .num{font:500 13px var(--mono);color:var(--ink-soft)}
+.alt{background:var(--paper-2)}
+.dark{background:var(--ink);color:var(--paper)}
+.dark .lede,.dark p{color:#C9CCD3}
+.sec-title{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:48px;align-items:end;margin-bottom:44px}
+.sec-title p{color:var(--ink-soft);margin:0}
+
+/* photo slot */
+.slot{position:relative;background:
+  repeating-linear-gradient(135deg,transparent 0 11px,rgba(29,35,48,.045) 11px 12px),var(--paper-2);
+  border-radius:var(--r);display:flex;align-items:flex-end;overflow:hidden;min-height:200px}
+.slot .cap{margin:14px;background:var(--card);padding:10px 12px;border-radius:4px;font:italic 400 13.5px/1.45 var(--sans);color:var(--ph-tx);max-width:34ch;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.slot .ico{position:absolute;top:16px;left:16px;width:30px;height:30px;color:#A79E8D}
+
+/* ---------- HOME ---------- */
+.hero{padding:64px 0 76px}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:56px;align-items:center}
+.hero h1 .role{display:block;font-size:.5em;line-height:1.15;letter-spacing:-.01em;color:var(--chile);margin-top:14px;font-weight:600}
+.hero .lede{margin:26px 0 34px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero .slot{min-height:520px;border-radius:200px 200px var(--r) var(--r)}
+.proof{background:var(--ink);color:var(--paper)}
+.proof .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.proof .item{padding:40px 28px 40px 0;border-right:1px solid rgba(244,238,227,.16);padding-left:28px}
+.proof .item:first-child{padding-left:0}
+.proof .item:last-child{border-right:0}
+.proof b{display:block;font:600 34px/1.05 var(--serif);letter-spacing:-.02em;margin-bottom:10px;color:#fff}
+.proof .item:nth-child(1) b{color:#F2A58F}
+.proof span{font-size:15px;color:#BFC3CC;line-height:1.45;display:block}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--card);border-radius:var(--r);padding:30px;display:flex;flex-direction:column;box-shadow:0 1px 0 var(--line),0 12px 30px -18px rgba(29,35,48,.25);transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 1px 0 var(--line),0 20px 40px -20px rgba(29,35,48,.35)}
+.card .n{font:500 13px var(--mono);color:var(--chile);margin-bottom:22px}
+.card svg.art{width:54px;height:54px;color:var(--sky);margin-bottom:20px}
+.card p{color:var(--ink-soft);font-size:15.5px;flex:1}
+.card .go{font:600 15px var(--sans);color:var(--chile);text-decoration:none;display:inline-flex;gap:6px;align-items:center;margin-top:8px}
+.card .go:hover{text-decoration:underline}
+.philo{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:56px}
+.philo blockquote{margin:0;font:400 22px/1.6 var(--serif);color:var(--ink)}
+.philo blockquote p{margin-bottom:.8em}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.tag{font:500 13px var(--mono);padding:6px 10px;border-radius:30px;background:var(--sky-lt);color:var(--sky)}
+
+/* ---------- CURRICULUM ---------- */
+.ladder{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start;position:relative}
+.rung{background:var(--card);border-radius:var(--r);overflow:hidden;box-shadow:0 1px 0 var(--line),0 12px 30px -18px rgba(29,35,48,.25)}
+.rung .top{padding:22px 26px;color:#fff}
+.rung:nth-child(1) .top{background:var(--sage)}
+.rung:nth-child(2) .top{background:var(--sky)}
+.rung:nth-child(3) .top{background:var(--chile)}
+.rung .grade{font:600 40px/1 var(--serif);letter-spacing:-.02em}
+.rung .band{font:500 12.5px var(--mono);letter-spacing:.05em;opacity:.85;margin-top:6px;text-transform:uppercase}
+.rung .body{padding:24px 26px 28px}
+.code{color:var(--ink);text-decoration:none;display:inline-block;font:500 13px var(--mono);background:var(--paper-2);padding:5px 9px;border-radius:4px;margin-bottom:14px}
+.rung h3{margin-bottom:12px}
+.rung .hook{color:var(--ink-soft);font-size:15.5px}
+.lanl{font-size:14px;background:var(--sky-lt);padding:10px 12px;border-radius:4px;margin-bottom:16px}
+.lanl b{color:var(--sky)}
+.five{display:flex;gap:4px;margin:18px 0 20px}
+.five span{flex:1;text-align:center;font:500 11px var(--mono);padding:6px 0;background:var(--paper-2);border-radius:3px;color:var(--ink-soft)}
+.ladder-axis{display:flex;justify-content:space-between;font:500 12.5px var(--mono);color:var(--ink-soft);margin-top:26px;border-top:1px dashed var(--line);padding-top:12px}
+.udl{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.udl figure{margin:0}
+.udl figcaption{font:500 13px var(--mono);color:var(--ink-soft);margin-bottom:12px;display:flex;justify-content:space-between;gap:10px}
+.sheet{background:#fff;border-radius:4px;padding:28px;box-shadow:0 14px 34px -20px rgba(29,35,48,.35);font-size:13.5px;min-height:430px}
+.sheet h4{font:700 15px var(--sans);margin:0 0 10px}
+.line{height:8px;background:#E6E3DD;border-radius:2px;margin:9px 0}
+.sheet .q{font-weight:600;margin-top:16px}
+.vocab{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}
+.vocab div{background:var(--sky-lt);border-radius:4px;padding:8px;text-align:center;font-size:12.5px}
+.vocab svg{width:26px;height:26px;color:var(--sky);display:block;margin:0 auto 4px}
+.vocab i{color:var(--ink-soft)}
+.step-row{display:flex;gap:10px;align-items:flex-start;margin:10px 0}
+.step-row b.n{flex:none;width:22px;height:22px;border-radius:50%;background:var(--ink);color:#fff;font-size:12px;display:grid;place-items:center}
+.ext{border:2px dashed var(--chile);border-radius:6px;padding:12px;margin-top:16px;background:#FFF6F2}
+.ext strong{color:var(--chile)}
+.mock-note{font:italic 13px var(--sans);color:var(--ph-tx);margin-top:10px}
+
+/* ---------- MUSEUM ---------- */
+.translate{display:grid;grid-template-columns:1fr 1fr;border-radius:var(--r);overflow:hidden;box-shadow:0 18px 40px -24px rgba(29,35,48,.4)}
+.translate > div{padding:38px}
+.raw{background:#E7E1D6;font:400 14.5px/1.75 var(--mono);color:#3A3F4A}
+.raw .lbl,.label .lbl{font:500 12.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:18px;display:flex;justify-content:space-between;gap:10px}
+.label{background:var(--ink);color:var(--paper)}
+.label .lbl{color:#F2A58F}
+.label h3{font-size:38px;line-height:1.05;margin-bottom:16px;color:#fff;letter-spacing:-.02em}
+.label p{font-size:19px;line-height:1.55;color:#E3E0D8}
+.try{display:inline-block;background:var(--chile);color:#fff;font:700 15px var(--sans);padding:10px 14px;border-radius:4px;margin-top:6px}
+.meta-row{display:flex;gap:18px;flex-wrap:wrap;font:500 13px var(--mono);color:var(--ink-soft);margin-top:16px}
+.meta-row span::before{content:"✓ ";color:var(--sage)}
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:s;position:relative}
+.timeline::before{content:"";position:absolute;top:21px;left:22px;right:22px;height:2px;background:var(--line)}
+.tstep{position:relative}
+.tstep .dot{width:44px;height:44px;border-radius:50%;background:var(--chile);color:#fff;display:grid;place-items:center;font:600 18px var(--serif);margin-bottom:20px;position:relative;box-shadow:0 0 0 6px var(--paper)}
+.alt .tstep .dot{box-shadow:0 0 0 6px var(--paper-2)}
+.tstep h3{margin-bottom:6px}
+.tstep .sub{font:500 13px var(--mono);color:var(--ink-soft);margin-bottom:14px}
+.tstep .slot{min-height:210px;margin-bottom:16px}
+.tstep ul{padding-left:18px;margin:0;font-size:15.5px;color:var(--ink-soft)}
+.tstep li{margin-bottom:6px}
+.guide{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:56px;align-items:center}
+.doc{background:#fff;border-radius:4px;padding:34px;box-shadow:0 24px 50px -26px rgba(29,35,48,.45);transform:rotate(-1.2deg)}
+.doc .dh{display:flex;justify-content:space-between;border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:16px;font:600 13px var(--mono)}
+.doc h4{font:600 20px var(--serif);margin:0 0 12px}
+.faq dt{font-weight:700;font-size:14.5px;margin-top:12px}
+.faq dd{margin:4px 0 0;font-size:14px;color:var(--ink-soft)}
+
+/* ---------- TEACHING ---------- */
+.reel{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:32px;align-items:stretch}
+.video{aspect-ratio:16/9;background:#11151D;border-radius:var(--r);position:relative;display:grid;place-items:center;overflow:hidden}
+.video::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 30%,rgba(180,68,43,.25),transparent 60%)}
+.play{width:84px;height:84px;border-radius:50%;background:var(--chile);display:grid;place-items:center;z-index:1;box-shadow:0 0 0 12px rgba(180,68,43,.25)}
+.play svg{width:30px;height:30px;color:#fff;margin-left:5px}
+.video .vcap{position:absolute;left:18px;bottom:16px;right:18px;z-index:1;font:italic 14px var(--sans);color:#C9C6BE}
+.chapters{list-style:none;margin:0;padding:0}
+.chapters li{display:grid;grid-template-columns:62px 1fr;gap:8px;padding:16px 0;border-bottom:1px solid rgba(244,238,227,.16)}
+.chapters li:first-child{padding-top:0}
+.chapters time{font:500 15px var(--mono);color:#F2A58F}
+.chapters span{color:#E3E0D8;font-size:15.5px;line-height:1.45}
+.impact{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:48px}
+.chart{background:var(--card);border-radius:var(--r);padding:26px;margin-bottom:22px;box-shadow:0 1px 0 var(--line)}
+.chart h4{font:600 16px var(--sans);margin:0 0 4px}
+.chart .say{font-size:14px;color:var(--ink-soft);margin-bottom:14px}
+.chart svg{width:100%;height:auto;display:block}
+.chart .src{font:italic 12.5px var(--sans);color:var(--ph-tx);margin-top:10px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-radius:var(--r);overflow:hidden;margin:20px 0 28px}
+.facts div{background:var(--card);padding:16px}
+.facts small{display:block;font:500 11.5px var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);margin-bottom:6px}
+.fixes{counter-reset:f;list-style:none;padding:0;margin:0 0 28px}
+.fixes li{counter-increment:f;display:grid;grid-template-columns:40px 1fr;gap:10px;padding:14px 0;border-top:1px solid var(--line)}
+.fixes li::before{content:counter(f);font:600 26px/1 var(--serif);color:var(--chile)}
+.fixes b{display:block;margin-bottom:3px}
+.fixes span{font-size:15px;color:var(--ink-soft)}
+
+/* ---------- OUTREACH ---------- */
+table.log{width:100%;border-collapse:collapse;background:var(--card);border-radius:var(--r);overflow:hidden;font-size:15.5px}
+table.log th{text-align:left;font:500 12.5px var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);padding:16px 20px;background:var(--paper-2)}
+table.log td{padding:16px 20px;border-top:1px solid var(--line);vertical-align:top}
+table.log td.h,table.log th.h{text-align:right;font-family:var(--mono)}
+table.log tfoot td{background:var(--ink);color:#fff;font-weight:700;font-size:17px}
+table.log tfoot td.h{color:#F2A58F;font:600 22px var(--serif)}
+.quote{margin:44px 0 0;display:grid;grid-template-columns:70px 1fr;gap:18px}
+.quote .mark{font:700 96px/0.8 var(--serif);color:var(--chile)}
+.quote p{font:400 22px/1.55 var(--serif)}
+.quote cite{font:normal 500 14px var(--mono);color:var(--ink-soft)}
+.tools{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tool{background:var(--card);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;box-shadow:0 1px 0 var(--line)}
+.tool .rn{font:600 15px var(--mono);color:var(--chile);margin-bottom:16px}
+.tool > svg{width:40px;height:40px;color:var(--sky);margin-bottom:16px}
+.tool .btn{align-self:flex-start}
+.tool p{font-size:15px;color:var(--ink-soft);flex:1}
+.pivot{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:56px;align-items:start}
+.bridge{list-style:none;padding:0;margin:0}
+.bridge li{display:grid;grid-template-columns:1fr 26px 1fr;gap:10px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(244,238,227,.16);font-size:15px}
+.bridge li span:first-child{color:#C9CCD3}
+.bridge li svg{width:20px;height:20px;color:#F2A58F}
+.bridge li span:last-child{color:#fff;font-weight:600}
+.contact{display:grid;grid-template-columns:repeat(3,1fr) auto;gap:28px;align-items:end;margin-top:56px;padding-top:36px;border-top:1px solid rgba(244,238,227,.2)}
+.contact a:not(.btn){color:inherit;text-decoration:none}
+.contact small{display:block;font:500 12px var(--mono);color:#9CA1AC;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+
+/* footer */
+.foot{border-top:1px solid var(--line);padding:30px 0 70px;font-size:14px;color:var(--ink-soft)}
+.foot .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.foot nav a{margin-right:16px;text-decoration:none}
+.foot nav a:hover{color:var(--chile)}
+.next{display:flex;justify-content:flex-end;padding:0 0 70px}
+.next a{text-decoration:none;font:600 22px var(--serif);display:inline-flex;align-items:center;gap:12px}
+.next a small{display:block;font:500 12px var(--mono);color:var(--ink-soft);text-transform:uppercase;letter-spacing:.06em}
+.next a:hover span{color:var(--chile)}
+
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,30px);opacity:0;background:var(--ink);color:#fff;padding:12px 18px;border-radius:6px;font-size:14.5px;transition:.25s;z-index:99;max-width:90vw;pointer-events:none}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:1060px){
+  .links{display:none;position:absolute;top:68px;left:0;right:0;background:var(--paper);flex-direction:column;padding:10px 20px 20px;border-bottom:1px solid var(--line)}
+  .links.open{display:flex}
+  .links a{padding:12px 6px;font-size:16px}
+  .links a.active{box-shadow:inset 3px 0 0 var(--chile);padding-left:12px}
+  .menu-toggle{display:block}
+}
+@media (max-width:900px){
+  .hero .wrap,.philo,.sec-title,.guide,.reel,.impact,.pivot{grid-template-columns:1fr;gap:32px}
+  .hero .slot{min-height:340px;border-radius:140px 140px var(--r) var(--r)}
+  .proof .wrap{grid-template-columns:1fr 1fr}
+  .proof .item{padding:26px 18px!important;border-right:0;border-bottom:1px solid rgba(244,238,227,.16)}
+  .cards,.ladder,.timeline,.tools{grid-template-columns:1fr}
+  .ladder-axis,.timeline::before{display:none}
+  .udl,.translate{grid-template-columns:1fr}
+  .contact{grid-template-columns:1fr 1fr}
+  section.block{padding:60px 0}
+  .doc{transform:none}
+}
+@media (max-width:560px){
+  .wrap{padding:0 18px}
+  body{font-size:16px}
+  .nav .btn-resume{display:none}
+  .proof .wrap{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr}
+  .translate>div{padding:26px}
+  table.log thead{display:none}
+  table.log,table.log tbody,table.log tr,table.log td{display:block;width:100%}
+  table.log tr{border-top:1px solid var(--line);padding:10px 0}
+  table.log td{border:0;padding:4px 18px}
+  table.log td.h{text-align:left}
+  table.log td[data-k]::before{content:attr(data-k) ": ";font:500 12px var(--mono);color:var(--ink-soft);text-transform:uppercase}
+  table.log tfoot tr{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+  table.log tfoot td{width:auto}
+  .contact{grid-template-columns:1fr}
+  .bridge li{grid-template-columns:1fr;gap:2px}
+  .bridge li svg{transform:rotate(90deg)}
+  .sheet{padding:20px}
+  .quote{grid-template-columns:36px 1fr;gap:10px}.quote .mark{font-size:64px}.quote p{font-size:19px}
+  table.log tfoot tr{background:var(--ink)}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-dl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 21h16"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l15 8-15 8z"/></symbol>
+    <symbol id="i-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h4l2-3h6l2 3h4v11H3z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+    <symbol id="i-wave" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 24c4-10 8-10 12 0s8 10 12 0 8-10 12 0"/><path d="M4 36c4-5 8-5 12 0s8 5 12 0 8-5 12 0" opacity=".45"/><path d="M4 12c4-5 8-5 12 0s8 5 12 0 8-5 12 0" opacity=".45"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="14" width="36" height="18" rx="2"/><path d="M10 32v8M38 32v8M6 22h36"/><circle cx="17" cy="9" r="3"/><path d="M27 6l4 6h-8z"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 42h36"/><rect x="10" y="26" width="6" height="12"/><rect x="21" y="16" width="6" height="22"/><rect x="32" y="8" width="6" height="30"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><rect x="6" y="11" width="36" height="26" rx="2"/><path d="M6 13l18 13 18-13"/></symbol>
+    <symbol id="i-check" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="6" width="28" height="36" rx="2"/><path d="M16 16l3 3 5-5M16 27l3 3 5-5M28 17h4M28 28h4"/></symbol>
+    <symbol id="i-box" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M6 15l18-8 18 8v18l-18 8-18-8z"/><path d="M6 15l18 8 18-8M24 23v18"/></symbol>
+    <symbol id="i-ear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 9a5 5 0 0 1 10 0c0 3-3 4-3 7a3 3 0 0 1-6 0"/><path d="M10 10a2 2 0 0 1 4 0"/></symbol>
+    <symbol id="i-string" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 7l3 10M21 7l-3 10"/><path d="M5 12h14" stroke-dasharray="2 2"/></symbol>
+  </defs>
+</svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#home"><b><span class="ph" style="font:inherit;font-style:italic">(First &amp; Last Name)</span></b><span>K–12 STEM EDUCATOR · SCIENCE OUTREACH</span></a>
+    <nav class="links" id="links" aria-label="Main">
+      <a href="#home" data-p="home">Home</a>
+      <a href="#curriculum" data-p="curriculum">K–12 Curriculum</a>
+      <a href="#exhibits" data-p="exhibits">Museum Exhibits</a>
+      <a href="#teaching" data-p="teaching">Live Teaching &amp; Impact</a>
+      <a href="#outreach" data-p="outreach">Outreach &amp; Experience</a>
+    </nav>
+    <a class="btn btn-ink btn-sm btn-resume" href="docs/resume.pdf" target="_blank" rel="noopener"><svg><use href="#i-dl"/></svg>Résumé PDF</a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu(this)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</header>
+
+<main>
+<!-- =============================== PAGE 1 · HOME =============================== -->
+<div class="page" id="p-home">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Portfolio · Northern New Mexico</span>
+        <h1><span class="ph" style="font-style:italic">(First &amp; Last Name)</span><span class="role">K–12 STEM Educator &amp; Science Outreach Specialist</span></h1>
+        <p class="lede">Translating complex scientific research into accessible, standards-aligned, hands-on STEAM experiences for Northern New Mexico learners.</p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="#teaching"><svg><use href="#i-play"/></svg>Watch 3-Min Teaching Reel</a>
+          <a class="btn btn-ghost" href="#curriculum">Explore Lesson Portfolio<svg><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+      <div class="slot" role="img" aria-label="Photo placeholder">
+        <svg class="ico"><use href="#i-cam"/></svg>
+        <div class="cap">(High-resolution action photo of you leading a hands-on activity, shot from behind or beside the students so no faces show. Get photo releases from the host site first.)</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="proof on-dark" aria-label="At a glance">
+    <div class="wrap">
+      <div class="item"><b>250+ hours</b><span>Live K–12 classroom and museum-floor facilitation</span></div>
+      <div class="item"><b>NM STEM Ready!</b><span>Standards-aligned curriculum design, K–12</span></div>
+      <div class="item"><b>LANL-themed</b><span>Interactive museum prototypes and exhibit text</span></div>
+      <div class="item"><b>Data-driven</b><span>Program evaluation and community partnerships</span></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-title">
+        <h2>Three pieces of proof</h2>
+        <p>Each artifact below answers one question a hiring panel will ask: can you write lessons, can you build for a museum floor, and can you show your programs work?</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="n">01 · CURRICULUM</div>
+          <svg class="art"><use href="#i-wave"/></svg>
+          <h3>Vertical Alignment Lesson Suite</h3>
+          <p>One science idea, three ages. Complete 45-minute lessons for 2nd, 7th and 11th grade, built on the 5E model and mapped to state standards.</p>
+          <a class="go" href="#curriculum">View lessons<svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+        </article>
+        <article class="card">
+          <div class="n">02 · EXHIBITS</div>
+          <svg class="art"><use href="#i-cart"/></svg>
+          <h3>Interactive Science Cart Case Study</h3>
+          <p>From sketch to sturdy build. Prototype v1, what broke during playtesting, and a v2 that resets in 30 seconds.</p>
+          <a class="go" href="#exhibits">See the build<svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+        </article>
+        <article class="card">
+          <div class="n">03 · IMPACT</div>
+          <svg class="art"><use href="#i-chart"/></svg>
+          <h3>Community Outreach Capstone Report</h3>
+          <p>A real outreach event, measured. Pre/post learning gains, teacher ratings and three curriculum fixes driven by the feedback.</p>
+          <a class="go" href="#teaching">Read the report<svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt">
+    <div class="wrap philo">
+      <div>
+        <span class="eyebrow">Educator philosophy</span>
+        <h2>Let them struggle a little. Then let them figure it out.</h2>
+        <div class="tags"><span class="tag">Inquiry-based</span><span class="tag">Culturally responsive</span><span class="tag">Neuro-inclusive</span><span class="tag">Bilingual-ready</span></div>
+      </div>
+      <blockquote>
+        <p>I believe kids learn science by doing science. If I lecture, they remember my words for a day. If they wrestle with a puzzle — why the paper-cup phone goes quiet, why one bridge holds and another sags — and then crack it themselves, they keep it. I call that productive struggle, and my job is to keep it productive: the right question at the right moment, then enough wait time to let them think.</p>
+        <p>Northern New Mexico’s learners come from rural towns, Pueblo communities, Hispanic families with deep roots, and every kind of brain. I plan for all of them from the start, with local examples, Spanish vocabulary support, and more than one way into every activity.</p>
+      </blockquote>
+    </div>
+  </section>
+  <div class="wrap next"><a href="#curriculum"><span><small>Next</small>K–12 Curriculum</span><svg width="24" height="24"><use href="#i-arrow"/></svg></a></div>
+</div>
+
+<!-- =============================== PAGE 2 · CURRICULUM =============================== -->
+<div class="page" id="p-curriculum">
+  <section class="page-head">
+    <div class="wrap">
+      <span class="eyebrow">02 · K–12 Curriculum</span>
+      <h1>One big idea, three grade levels</h1>
+      <p class="lede" style="margin-top:22px">Every lesson starts at the end. Using Backward Design, I first decide what students must be able to explain, then how I’ll know they can, and only then pick the activity. The 5E model (Engage, Explore, Explain, Elaborate, Evaluate) gives each lesson the same five-step shape, so students always explore before I explain anything. Here, one theme, waves that carry information, grows from a 2nd grader’s string telephone to an 11th grader’s claim about how satellites send data.</p>
+      <p class="goal">Each lesson is substitute-ready: supply list, minute-by-minute pacing, safety notes, and differentiated handouts for struggling learners and English language learners.</p>
+    </div>
+  </section>
+
+  <section class="block tight" style="padding-top:20px">
+    <div class="wrap">
+      <div class="ladder">
+        <article class="rung">
+          <div class="top"><div class="grade">2nd Grade</div><div class="band">Elementary · 45 min</div></div>
+          <div class="body">
+            <a class="code" href="https://www.nextgenscience.org/pe/2-ps1-2-matter-and-its-interactions" target="_blank" rel="noopener">NM STEM Ready! 2-PS1-2 ↗</a>
+            <h3>Which String Talks Best?</h3>
+            <p class="hook">Pairs build cup-and-string telephones and stretch them across the room, testing yarn, fishing line and dental floss. They vote with stickers on which material carried a whisper best, then explain why “tight and thin” wins.</p>
+            <div class="five"><span>EN</span><span>EX</span><span>EXP</span><span>EL</span><span>EV</span></div>
+            <a class="btn btn-ghost btn-sm" href="docs/lesson-2nd-grade.pdf" target="_blank" rel="noopener"><svg><use href="#i-dl"/></svg>2nd Grade Lesson PDF</a>
+          </div>
+        </article>
+        <article class="rung">
+          <div class="top"><div class="grade">7th Grade</div><div class="band">Middle school · 45 min</div></div>
+          <div class="body">
+            <a class="code" href="https://www.nextgenscience.org/pe/ms-ps4-2-waves-and-their-applications-technologies-information-transfer" target="_blank" rel="noopener">NM STEM Ready! MS-PS4-2 ↗</a>
+            <h3>Block the Signal</h3>
+            <p class="hook">Teams wrap a phone in foil, felt, plastic and cardboard and measure how much sound and signal gets through. They change one variable at a time, graph the results, and decide which material a sensor shield should use.</p>
+            <div class="five"><span>EN</span><span>EX</span><span>EXP</span><span>EL</span><span>EV</span></div>
+            <a class="btn btn-ghost btn-sm" href="docs/lesson-7th-grade.pdf" target="_blank" rel="noopener"><svg><use href="#i-dl"/></svg>7th Grade Lesson PDF</a>
+          </div>
+        </article>
+        <article class="rung">
+          <div class="top"><div class="grade">11th Grade</div><div class="band">High school · 45 min</div></div>
+          <div class="body">
+            <a class="code" href="https://www.nextgenscience.org/pe/hs-ps4-5-waves-and-their-applications-technologies-information-transfer" target="_blank" rel="noopener">NM STEM Ready! HS-PS4-5 ↗</a>
+            <h3>Messages From Orbit</h3>
+            <p class="hook">Students use a <a href="https://phet.colorado.edu/en/simulations/waves-intro" target="_blank" rel="noopener">PhET wave simulation</a> to see how changing a wave encodes information. They then write a Claim-Evidence-Reasoning argument for how a satellite sensor sends data back to Earth.</p>
+            <p class="lanl"><b>LANL research tie-in:</b> <span class="ph">(e.g., LANL-built sensor payloads on GPS satellites — confirm a current, public example with Bradbury Science Museum education staff)</span></p>
+            <div class="five"><span>EN</span><span>EX</span><span>EXP</span><span>EL</span><span>EV</span></div>
+            <a class="btn btn-ghost btn-sm" href="docs/lesson-11th-grade.pdf" target="_blank" rel="noopener"><svg><use href="#i-dl"/></svg>11th Grade Lesson PDF</a>
+          </div>
+        </article>
+      </div>
+      <div class="ladder-axis"><span>Concrete · large-motor · sensory</span><span>Variables · data · graphs</span><span>Models · simulation · argument</span></div>
+      <p class="mock-note">Standard codes are performance expectations NM STEM Ready! shares with NGSS; each code links to its NGSS page. Full list: <a href="https://web.ped.nm.gov/bureaus/math-and-science-bureau/nm-stem-ready-science/nm-stem-ready-science-standards/" target="_blank" rel="noopener">NM PED standards</a>. <span class="ph">(Confirm final codes against your finished lessons and the NM PED standards list.)</span></p>
+    </div>
+  </section>
+
+  <section class="block alt">
+    <div class="wrap">
+      <div class="sec-title">
+        <h2>Differentiation &amp; UDL spotlight</h2>
+        <p>Universal Design for Learning (UDL) means building in several ways to understand and respond from the start, instead of patching a lesson later. Same content, same rigor: the redesign removes barriers, not challenge.</p>
+      </div>
+      <div class="udl">
+        <figure>
+          <figcaption><span>BEFORE · STANDARD WORKSHEET</span><span>Text-only</span></figcaption>
+          <div class="sheet" aria-label="Mockup of a text-heavy worksheet">
+            <h4>Sound Waves Worksheet</h4>
+            <div class="line" style="width:96%"></div><div class="line" style="width:91%"></div><div class="line" style="width:94%"></div><div class="line" style="width:70%"></div>
+            <p class="q">1. Explain how sound travels through a string telephone.</p>
+            <div class="line"></div><div class="line"></div><div class="line" style="width:80%"></div>
+            <p class="q">2. Which material is best? Why?</p>
+            <div class="line"></div><div class="line"></div>
+            <p class="q">3. Describe vibration, medium and amplitude.</p>
+            <div class="line"></div><div class="line"></div><div class="line" style="width:60%"></div>
+          </div>
+        </figure>
+        <figure>
+          <figcaption><span>AFTER · SCAFFOLDED VERSION</span><span>Icons · bilingual · extension</span></figcaption>
+          <div class="sheet" aria-label="Mockup of a scaffolded worksheet">
+            <h4>How Does a String Phone Work? / ¿Cómo funciona?</h4>
+            <div class="vocab">
+              <div><svg><use href="#i-wave"/></svg><b>vibration</b><br><i>vibración</i></div>
+              <div><svg><use href="#i-string"/></svg><b>medium</b><br><i>medio</i></div>
+              <div><svg><use href="#i-ear"/></svg><b>sound</b><br><i>sonido</i></div>
+            </div>
+            <div class="step-row"><b class="n">1</b><span>Pull the string <b>tight</b>. Whisper. Did your partner hear? ☐ Yes ☐ No</span></div>
+            <div class="step-row"><b class="n">2</b><span>Circle the best string: yarn · fishing line · floss</span></div>
+            <div class="step-row"><b class="n">3</b><span>Finish the sentence: “Sound moved because the string ________.”</span></div>
+            <div class="ext"><strong>Extension Challenge:</strong> Can you make a three-way phone? Draw your design and predict who hears best.</div>
+          </div>
+        </figure>
+      </div>
+      <p class="mock-note">These are layout mockups. <span class="ph">(Swap in screenshots of your real worksheet and its redesign.)</span></p>
+    </div>
+  </section>
+  <div class="wrap next" style="padding-top:60px"><a href="#exhibits"><span><small>Next</small>Museum Exhibits</span><svg width="24" height="24"><use href="#i-arrow"/></svg></a></div>
+</div>
+
+<!-- =============================== PAGE 3 · EXHIBITS =============================== -->
+<div class="page" id="p-exhibits">
+  <section class="page-head">
+    <div class="wrap">
+      <span class="eyebrow">03 · Museum Exhibits &amp; Science Translation</span>
+      <h1>From lab report to museum floor</h1>
+      <p class="lede" style="margin-top:22px">Museum visitors choose what to look at, and most give a label a few seconds. That means I have to turn dense research into one clear idea and something to do with your hands, fast.</p>
+    </div>
+  </section>
+
+  <section class="block tight" style="padding-top:10px">
+    <div class="wrap">
+      <h2 style="margin-bottom:28px">The science translation</h2>
+      <div class="translate">
+        <div class="raw">
+          <div class="lbl"><span>The raw science</span><span>Technical register</span></div>
+          <p><span class="ph">(Paste an 80–120 word excerpt from a real LANL technical abstract here and cite it, e.g., a ChemCam or SuperCam Mars spectroscopy paper. Confirm the citation on lanl.gov.)</span></p>
+          <p style="opacity:.85">Illustrative register only: “Laser-induced breakdown spectroscopy (LIBS) employs a pulsed 1067 nm laser to ablate target material at standoff distances up to 7 m, generating a plasma whose atomic emission lines are resolved across 240–850 nm to enable quantitative elemental composition analysis via multivariate calibration models…”</p>
+        </div>
+        <div class="label on-dark">
+          <div class="lbl"><span>The museum label</span><span>60 words · Grade 6</span></div>
+          <h3>Zap a rock. Read its rainbow.</h3>
+          <p>On Mars, a rover shoots a laser at a rock. The rock flashes with a tiny spark of light. Scientists split that light into colors, like a rainbow. Each element makes its own pattern of colors. By reading the pattern, they learn what the rock is made of, without ever touching it. Scientists at Los Alamos helped build that laser.</p>
+          <p style="font-size:13px;opacity:.8;margin-top:6px">About the instrument: <a href="https://science.nasa.gov/mission/msl-curiosity/science-instruments/" target="_blank" rel="noopener" style="color:inherit">NASA Curiosity science instruments ↗</a></p>
+          <span class="try">Try this! Look through the prism. What colors do you see?</span>
+        </div>
+      </div>
+      <div class="meta-row"><span>Big Idea headline</span><span>60-word body</span><span>One “Try This!” action</span><span class="ph" style="font-family:var(--sans)">(Run your final label through a readability checker and note the grade level)</span></div>
+    </div>
+  </section>
+
+  <section class="block alt">
+    <div class="wrap">
+      <div class="sec-title">
+        <h2>Tabletop science cart prototype</h2>
+        <p>Three rounds of building and testing with real visitors. The goal: an activity a volunteer can run alone and reset for the next family in 30 seconds.</p>
+      </div>
+      <div class="timeline">
+        <div class="tstep">
+          <div class="dot">1</div>
+          <h3>Concept &amp; sketch</h3>
+          <div class="sub">Under $25 · durable supplies</div>
+          <div class="slot"><svg class="ico"><use href="#i-cam"/></svg><div class="cap">(Photo of your first sketch)</div></div>
+          <ul><li><span class="ph">(Supply list with prices, e.g., 3 acrylic prisms, LED flashlight, laminated color cards. Total under $25.)</span></li></ul>
+        </div>
+        <div class="tstep">
+          <div class="dot">2</div>
+          <h3>Prototype v1.0</h3>
+          <div class="sub">Playtest friction</div>
+          <div class="slot"><svg class="ico"><use href="#i-cam"/></svg><div class="cap">(Photo of your first build)</div></div>
+          <ul>
+            <li><span class="ph">(What confused testers, e.g., kids didn’t know where to look)</span></li>
+            <li><span class="ph">(What broke, e.g., paper cards tore by noon)</span></li>
+            <li><span class="ph">(What slowed reset, e.g., loose parts walked off)</span></li>
+          </ul>
+        </div>
+        <div class="tstep">
+          <div class="dot">3</div>
+          <h3>Prototype v2.0</h3>
+          <div class="sub">30-second reset · storm-proofed</div>
+          <div class="slot"><svg class="ico"><use href="#i-cam"/></svg><div class="cap">(Photo of final build + your printable tabletop tent card)</div></div>
+          <ul><li><span class="ph">(The fixes, e.g., tethered prisms, outlined “home spots” on the tray, laminated cards)</span></li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap guide">
+      <div class="doc" aria-label="Facilitator guide preview">
+        <div class="dh"><span>STAFF FACILITATOR GUIDE</span><span>PAGE 2 OF 2</span></div>
+        <h4>Tough questions visitors ask</h4>
+        <dl class="faq">
+          <dt>“Is the laser dangerous?”</dt>
+          <dd>Our cart uses a flashlight, not a laser. On Mars the rover is the only one in range.</dd>
+          <dt>“How do they know it’s not just dirt?”</dt>
+          <dd>Every element has its own color “fingerprint.” Dust has a different pattern from the rock underneath.</dd>
+          <dt>“Does Los Alamos make weapons?”</dt>
+          <dd><span class="ph">(Use the museum’s approved answer — confirm with Bradbury Science Museum staff)</span></dd>
+        </dl>
+      </div>
+      <div>
+        <span class="eyebrow">Downloadable</span>
+        <h2>A guide a brand-new volunteer can run cold</h2>
+        <p class="lede" style="margin:18px 0 28px">Two pages: setup, a 3-minute script, safety notes, the reset checklist, and answers to the tough questions visitors really ask.</p>
+        <a class="btn btn-primary" href="docs/facilitator-guide.pdf" target="_blank" rel="noopener"><svg><use href="#i-dl"/></svg>Download 2-Page Facilitator Guide (PDF)</a>
+      </div>
+    </div>
+  </section>
+  <div class="wrap next"><a href="#teaching"><span><small>Next</small>Live Teaching &amp; Impact</span><svg width="24" height="24"><use href="#i-arrow"/></svg></a></div>
+</div>
+
+<!-- =============================== PAGE 4 · TEACHING =============================== -->
+<div class="page" id="p-teaching">
+  <section class="page-head">
+    <div class="wrap">
+      <span class="eyebrow">04 · Live Teaching &amp; Program Impact</span>
+      <h1>Watch me teach. Then see what changed.</h1>
+      <p class="lede" style="margin-top:22px">Room command is the hardest skill to prove on paper, so here it is on video. Below the video: what one outreach event taught students, and what I changed afterward.</p>
+    </div>
+  </section>
+
+  <section class="block dark on-dark">
+    <div class="wrap reel">
+      <div class="video" role="img" aria-label="Teaching reel placeholder">
+        <div class="play"><svg><use href="#i-play"/></svg></div>
+        <div class="vcap">(Your 3–5 minute reel. Film angled toward you, not the students. Host it on YouTube or Vimeo and link or embed it here.)</div>
+      </div>
+      <div>
+        <span class="eyebrow" style="color:#F2A58F">Chapters</span>
+        <ol class="chapters">
+          <li><time>0:00</time><span>Attention signal &amp; smooth supply transition</span></li>
+          <li><time>1:15</time><span>Open-ended inquiry questions &amp; wait time</span></li>
+          <li><time>2:45</time><span>Multi-age museum floor facilitation</span></li>
+          <li><time>3:50</time><span>Adapting on the fly during a failed experiment</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-title">
+        <h2>Outreach capstone impact report</h2>
+        <p>The charts show the shape of the report. <span class="ph">(All numbers below are example values: replace them with your own event data.)</span></p>
+      </div>
+      <div class="impact">
+        <div>
+          <div class="chart">
+            <h4>Students who could explain the core idea</h4>
+            <p class="say">Before vs. after the workshop, share of students</p>
+            <svg viewBox="0 0 480 190" role="img" aria-label="Example bar chart: 32% before, 78% after">
+              <g font-family="Public Sans" font-size="13">
+                <text x="0" y="52" fill="#4A5162">Before</text>
+                <rect x="70" y="34" width="118" height="28" fill="#C9C1B2"/>
+                <text x="196" y="53" fill="#1D2330" font-weight="700">32%</text>
+                <text x="0" y="112" fill="#4A5162">After</text>
+                <rect x="70" y="94" width="289" height="28" fill="#B4442B"/>
+                <text x="367" y="113" fill="#1D2330" font-weight="700">78%</text>
+                <line x1="70" y1="20" x2="70" y2="140" stroke="#1D2330"/>
+                <text x="70" y="168" fill="#666159" font-size="12">0%</text>
+                <text x="440" y="168" fill="#666159" font-size="12" text-anchor="end">100%</text>
+              </g>
+            </svg>
+            <p class="src">(Example data. Source: your 3-question exit ticket, pre/post, n = your headcount)</p>
+          </div>
+          <div class="chart">
+            <h4>Host teacher ratings</h4>
+            <p class="say">Average score out of 5</p>
+            <svg viewBox="0 0 480 170" role="img" aria-label="Example ratings: standards alignment 4.6, would re-book 4.8, classroom fit 4.3">
+              <g font-family="Public Sans" font-size="13">
+                <text x="0" y="36" fill="#4A5162">Would re-book</text>
+                <rect x="150" y="20" width="250" height="24" fill="#B4442B"/><text x="408" y="37" font-weight="700" fill="#1D2330">4.8</text>
+                <text x="0" y="86" fill="#4A5162">Standards fit</text>
+                <rect x="150" y="70" width="240" height="24" fill="#C9C1B2"/><text x="398" y="87" font-weight="700" fill="#1D2330">4.6</text>
+                <text x="0" y="136" fill="#4A5162">Classroom fit</text>
+                <rect x="150" y="120" width="224" height="24" fill="#C9C1B2"/><text x="382" y="137" font-weight="700" fill="#1D2330">4.3</text>
+                <line x1="150" y1="10" x2="150" y2="154" stroke="#1D2330"/>
+              </g>
+            </svg>
+            <p class="src">(Example data. Source: your 5-question teacher feedback survey, n = number of teachers)</p>
+          </div>
+        </div>
+        <div>
+          <span class="eyebrow">Executive summary</span>
+          <p style="font-size:18px">A one-day, hands-on waves workshop delivered on site at a partner school, with a pre/post exit ticket and a teacher survey.</p>
+          <div class="facts">
+            <div><small>Grade level</small><span class="ph">(e.g., 7th)</span></div>
+            <div><small>Headcount</small><span class="ph">(e.g., 64 students)</span></div>
+            <div><small>Partner site</small><span class="ph">(School name — confirm with host teacher)</span></div>
+          </div>
+          <h3 style="margin-bottom:10px">3 curriculum fixes from the feedback</h3>
+          <ol class="fixes">
+            <li><div><b>Shorter intro, faster hands-on</b><span class="ph">(e.g., cut the opening talk from 10 to 4 minutes after exit tickets said “the beginning was long”)</span></div></li>
+            <li><div><b>Vocabulary up front</b><span class="ph">(e.g., added bilingual picture cards after ELL students missed the key term)</span></div></li>
+            <li><div><b>Built-in extension</b><span class="ph">(e.g., added a challenge card for groups that finished early)</span></div></li>
+          </ol>
+          <div class="ctas">
+            <a class="btn btn-primary btn-sm" href="docs/impact-report.pdf" target="_blank" rel="noopener"><svg><use href="#i-dl"/></svg>Full 2-Page Impact Report (PDF)</a>
+            <a class="btn btn-ghost btn-sm" href="docs/exit-ticket.pdf" target="_blank" rel="noopener">View 3-Question Exit Ticket (PDF)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="wrap next"><a href="#outreach"><span><small>Next</small>Outreach &amp; Experience</span><svg width="24" height="24"><use href="#i-arrow"/></svg></a></div>
+</div>
+
+<!-- =============================== PAGE 5 · OUTREACH =============================== -->
+<div class="page" id="p-outreach">
+  <section class="page-head">
+    <div class="wrap">
+      <span class="eyebrow">05 · Outreach Playbook &amp; Verified Experience</span>
+      <h1>Ready to run it, with the hours to show for it</h1>
+      <p class="lede" style="margin-top:22px">The logged teaching hours, the tools I use to plan school visits, and how my earlier career led me here.</p>
+    </div>
+  </section>
+
+  <section class="block tight" style="padding-top:10px">
+    <div class="wrap">
+      <h2 style="margin-bottom:24px">Verified practicum &amp; teaching log</h2>
+      <table class="log">
+        <thead><tr><th>Setting / Organization</th><th>Role</th><th>Age bands served</th><th class="h">Verified hours</th></tr></thead>
+        <tbody>
+          <tr><td data-k="Setting"><span class="ph">(Museum — confirm with floor supervisor)</span></td><td data-k="Role">Floor educator / docent</td><td data-k="Ages">All ages, K–12 field trips</td><td class="h" data-k="Hours"><span class="ph">(96)</span></td></tr>
+          <tr><td data-k="Setting"><span class="ph">(After-school STEM program — confirm with program director)</span></td><td data-k="Role">STEM instructor</td><td data-k="Ages">Grades 3–8</td><td class="h" data-k="Hours"><span class="ph">(72)</span></td></tr>
+          <tr><td data-k="Setting"><span class="ph">(Public library — confirm with youth services coordinator)</span></td><td data-k="Role">Youth program facilitator</td><td data-k="Ages">Grades K–5</td><td class="h" data-k="Hours"><span class="ph">(48)</span></td></tr>
+          <tr><td data-k="Setting"><span class="ph">(Summer STEM camp — confirm with camp director)</span></td><td data-k="Role">Camp educator</td><td data-k="Ages">Grades 6–12</td><td class="h" data-k="Hours"><span class="ph">(40)</span></td></tr>
+        </tbody>
+        <tfoot><tr><td colspan="3">Total verified contact hours</td><td class="h">250+</td></tr></tfoot>
+      </table>
+      <p class="mock-note">Hours come from my hour-tracking log (date, venue, age group, hours, role), signed off by each site supervisor. <span class="ph">(Replace example hours with your signed totals.)</span></p>
+      <div class="quote">
+        <div class="mark" aria-hidden="true">“</div>
+        <div>
+          <p><span class="ph">(2–3 sentence endorsement from a practicum supervisor or host teacher about your room command and reliability. Get written permission to quote them.)</span></p>
+          <cite><span class="ph">(Name, title, organization)</span></cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt">
+    <div class="wrap">
+      <div class="sec-title">
+        <h2>Community outreach toolkit</h2>
+        <p>The working documents behind every school visit. Free to download and reuse.</p>
+      </div>
+      <div class="tools">
+        <div class="tool"><div class="rn">i.</div><svg><use href="#i-mail"/></svg><h3>Principal &amp; partner pitch emails</h3><p>Three ready-to-edit templates: the first pitch, the logistics confirmation, and the thank-you with survey link.</p><a class="btn btn-ghost btn-sm" href="docs/toolkit-email-templates.pdf" target="_blank" rel="noopener"><svg><use href="#i-dl"/></svg>Download</a></div>
+        <div class="tool"><div class="rn">ii.</div><svg><use href="#i-check"/></svg><h3>Host-site logistics &amp; safety checklist</h3><p>Everything to confirm before the van leaves: room setup, power, allergies, photo permissions, and emergency contacts.</p><a class="btn btn-ghost btn-sm" href="docs/toolkit-logistics-safety-checklist.pdf" target="_blank" rel="noopener"><svg><use href="#i-dl"/></svg>Download</a></div>
+        <div class="tool"><div class="rn">iii.</div><svg><use href="#i-box"/></svg><h3>Travel kit inventory &amp; 30-second reset</h3><p>What goes in each bin, what to restock, and the reset routine that gets a table ready for the next group.</p><a class="btn btn-ghost btn-sm" href="docs/toolkit-travel-kit-reset-guide.pdf" target="_blank" rel="noopener"><svg><use href="#i-dl"/></svg>Download</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block dark on-dark">
+    <div class="wrap">
+      <div class="pivot">
+        <div>
+          <span class="eyebrow" style="color:#F2A58F">Career pivot</span>
+          <h2 style="color:#fff;margin-bottom:22px">Why a career-changer makes a strong outreach educator</h2>
+          <p>Before teaching, I spent <span class="ph">(X years as a [previous role] at [organization])</span>. That work taught me to run projects with hard deadlines, explain complicated ideas to people who don’t share my jargon, and keep a team moving when plans change. Outreach needs all three, plus the calm that comes from having handled clients, budgets and surprises before.</p>
+          <p>My 60-week STEM education fellowship turned those strengths into classroom skills: standards-aligned lesson design, museum-style science writing, 250+ hours with real K–12 groups, and program evaluation. I bring a project manager’s calendar and a teacher’s patience to every school visit.</p>
+        </div>
+        <ul class="bridge" aria-label="Prior skills mapped to outreach skills">
+          <li><span>Project management</span><svg><use href="#i-arrow"/></svg><span>Juggling school visits &amp; exhibit deadlines</span></li>
+          <li><span>Client communication</span><svg><use href="#i-arrow"/></svg><span>Principal &amp; teacher partnerships</span></li>
+          <li><span>Team leadership</span><svg><use href="#i-arrow"/></svg><span>Training volunteers &amp; floor staff</span></li>
+          <li><span>Reporting</span><svg><use href="#i-arrow"/></svg><span>Program evaluation &amp; impact data</span></li>
+        </ul>
+      </div>
+      <div class="contact" id="contact">
+        <div><small>Email</small><a href="mailto:you@email.com"><span class="ph">(you@email.com)</span></a></div>
+        <div><small>LinkedIn</small><a href="https://www.linkedin.com/in/yourname" target="_blank" rel="noopener"><span class="ph">(linkedin.com/in/yourname)</span></a></div>
+        <div><small>Phone</small><a href="tel:+15050000000"><span class="ph">(505) 000-0000</span></a></div>
+        <a class="btn btn-primary" href="docs/resume.pdf" target="_blank" rel="noopener"><svg><use href="#i-dl"/></svg>Download Full Résumé (PDF)</a>
+      </div>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <nav aria-label="Footer"><a href="#home">Home</a><a href="#curriculum">Curriculum</a><a href="#exhibits">Exhibits</a><a href="#teaching">Teaching</a><a href="#outreach">Outreach</a></nav>
+    <span>© 2026 <span class="ph">(First &amp; Last Name)</span> · Northern New Mexico</span>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+const pages=['home','curriculum','exhibits','teaching','outreach'];
+function show(){
+  let h=(location.hash||'#home').slice(1);
+  if(!pages.includes(h)) h='home';
+  pages.forEach(p=>document.getElementById('p-'+p).classList.toggle('show',p===h));
+  document.querySelectorAll('.links a').forEach(a=>a.classList.toggle('active',a.dataset.p===h));
+  document.getElementById('links').classList.remove('open');
+  document.querySelector('.menu-toggle').setAttribute('aria-expanded','false');
+  window.scrollTo(0,0);
+  document.title=(h==='home'?'':document.querySelector('.links a[data-p="'+h+'"]').textContent+' · ')+'(First & Last Name) — STEM Educator';
+}
+window.addEventListener('hashchange',show);show();
+function toggleMenu(b){const l=document.getElementById('links');const o=l.classList.toggle('open');b.setAttribute('aria-expanded',o)}
+let tt;
+document.addEventListener('click',e=>{
+  const a=e.target.closest('a[data-ph]');if(!a)return;
+  e.preventDefault();
+  const t=document.getElementById('toast');
+  t.textContent='Placeholder: link '+a.dataset.ph+' here.';
+  t.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('on'),2600);
+});
+</script>
+</body>
+</html>
